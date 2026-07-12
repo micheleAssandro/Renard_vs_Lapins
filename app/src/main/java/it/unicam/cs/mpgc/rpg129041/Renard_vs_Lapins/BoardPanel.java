@@ -16,7 +16,7 @@ public class BoardPanel extends JPanel {
     public BoardPanel(Board board) {
         this.board = board;
 
-        foxImage = loadImage("/dog.png");
+        foxImage = loadImage("/fox.png");
         rabbitImage = loadImage("/rabbit.png");
         playerImage = loadImage("/monkey.png");
     }
