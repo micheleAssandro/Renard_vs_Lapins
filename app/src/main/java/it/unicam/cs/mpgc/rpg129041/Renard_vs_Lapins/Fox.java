@@ -20,7 +20,7 @@ public class Fox extends Entity {
 
             if (board.isRabbit(newR, newC)) {
                 board.removeRabbit(newR, newC);
-                System.out.println("🐰 Catturato!");
+                System.out.println("Rabbit Catturato!");
             }
 
             board.moveEntity(this, newR, newC);
