@@ -20,7 +20,6 @@ repositories {
 
 dependencies {
     // This dependency is used by the application.
-//    implementation(libs.guava)
     implementation("com.google.code.gson:gson:2.10.1")
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
@@ -28,7 +27,6 @@ dependencies {
 
 javafx{
     version = "21"
-    //modules = listOf("javafx.controls", "javafx.graphics")
     modules = listOf("javafx.controls","javafx.fxml")
 }
 
@@ -39,30 +37,6 @@ tasks.test {
 }
 
 
-/*
-*testing {
-*    suites {
-*        // Configure the built-in test suite
-*        val test by getting(JvmTestSuite::class) {
-*            // Use JUnit Jupiter test framework
-*            useJUnitJupiter("6.0.1")
-*        }
-*    }
-*}
-*/
-
-/*
-*tasks.register<JavaExec>("runApp") {
-*    group = "application"
-*    mainClass.set("it.unicam.cs.mpgc.rpg129041.Renard_vs_Lapins.Main")
-*    classpath = sourceSets["main"].runtimeClasspath
-*}
-*
-*tasks.named<JavaExec>("run") {
-*    mainClass.set("it.unicam.cs.mpgc.rpg129041.Renard_vs_Lapins.Main")
-*}
-*/
-
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
@@ -72,9 +46,5 @@ java {
 
 application {
     // Define the main class for the application.
-//modificare a seconda di QUALE è la CLASSE PRINCIPALE MAIN		
-//    mainClass = "org.example.App"
-//    mainClass.set("org.example.Main")  		
-      mainClass.set("it.unicam.cs.mpgc.rpg129041.Renard_vs_Lapins.Main")	
-
+    mainClass.set("it.unicam.cs.mpgc.rpg129041.Renard_vs_Lapins.Main")	
 }
